@@ -170,6 +170,7 @@ class Nanoct:
            new_dist.append(round(dist[i],3))
 
         values, counts = np.unique(new_dist, return_counts=True)
+        print(values,counts)
         freq = np.dstack((values,counts)).reshape(-1,2)
         sorted_nano = nanoparticle[np.argsort(new_dist)]
 
@@ -178,6 +179,7 @@ class Nanoct:
             raise AssertionError("Number of layers do not match Number of symbols")
         else:
           layers = np.array_split(counts,len(symbols))
+          print(layers)
           elem_col = []
           for i in range(len(layers)):
                for j in range(len(layers[i])):

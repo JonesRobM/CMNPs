@@ -1,7 +1,6 @@
 #Your face here
-from .ClassSpec import Spectrum
-import Epsilon_DFT as dft
-import Epsilon_ExpClass as exp
+from .Spectra import Spectrum
+from .Epsilon_ExpClass import Ag, Au, Cu
 from os.path import dirname, basename, isfile, join
 import glob
 modules = glob.glob(join(dirname(__file__), "*.py"))
